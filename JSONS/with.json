@@ -1,0 +1,101 @@
+{
+    "BoomCoreParams": {
+      "fetchWidth": ["Int", 1],
+      "decodeWidth": ["Int", 1],
+      "numRobEntries": ["Int", 64],
+      "issueParams": [
+        {
+          "issueWidth": ["Int", 1],
+          "numEntries": ["Int", 16],
+          "iqType": ["Long", 1],
+          "dispatchWidth": ["Int", 1]
+        },
+        {
+          "issueWidth": ["Int", 2],
+          "numEntries": ["Int", 16],
+          "iqType": ["Long", 2],
+          "dispatchWidth": ["Int", 1]
+        },
+        {
+          "issueWidth": ["Int", 1],
+          "numEntries": ["Int", 16],
+          "iqType": ["Long", 3],
+          "dispatchWidth": ["Int", 1]
+        }
+      ],
+      "numLdqEntries": ["Int", 16],
+      "numStqEntries": ["Int", 16],
+      "numIntPhysRegisters": ["Int", 96],
+      "numFpPhysRegisters": ["Int", 64],
+      "maxBrCount": ["Int", 4],
+      "numFetchBufferEntries": ["Int", 16],
+      "enableAgePriorityIssue": ["Boolean", true],
+      "enablePrefetching": ["Boolean", false],
+      "enableFastLoadUse": ["Boolean", true],
+      "enableCommitMapTable": ["Boolean", false],
+      "enableFastPNR": ["Boolean", false],
+      "enableSFBOpt": ["Boolean", false],
+      "enableGHistStallRepair": ["Boolean", true],
+      "enableBTBFastRepair": ["Boolean", true],
+      "useAtomicsOnlyForIO": ["Boolean", false],
+      "ftq": {
+        "entries": ["Int", 8],
+        "deqWidth": ["Int", 1],
+        "enqWidth": ["Int", 1]
+      },
+      "intToFpLatency": ["Int", 2],
+      "imulLatency": ["Int", 3],
+      "nPerfCounters": ["Int", 0],
+      "numRXQEntries": ["Int", 4],
+      "numRCQEntries": ["Int", 8],
+      "numDCacheBanks": ["Int", 1],
+      "nPMPs": ["Int", 8],
+      "enableICacheDelay": ["Boolean", false],
+      "enableBranchPrediction": ["Boolean", true],
+      "globalHistoryLength": ["Int", 64],
+      "localHistoryLength": ["Int", 32],
+      "localHistoryNSets": ["Int", 128],
+      "bpdMaxMetaLength": ["Int", 120],
+      "numRasEntries": ["Int", 32],
+      "enableRasTopRepair": ["Boolean", true],
+      "useCompressed": ["Boolean", true],
+      "useFetchMonitor": ["Boolean", true],
+      "bootFreqHz": ["BigInt", 0],
+      "fpu": {
+        "sfmaLatency": ["Int", 4],
+        "dfmaLatency": ["Int", 4]
+      },
+      "usingFPU": ["Boolean", true],
+      "haveBasicCounters": ["Boolean", true],
+      "misaWritable": ["Boolean", false],
+      "mtvecInit": ["BigInt", 0],
+      "mtvecWritable": ["Boolean", true],
+      "haveCFlush": ["Boolean", false],
+"mulDiv": [
+    "Option[freechips.rocketchip.rocket.MulDivParams]",
+    {"divEarlyOut": true}
+],
+"nBreakpoints": ["Int", 0],
+"nL2TLBEntries": ["Int", 512],
+"nPTECacheEntries": ["Int", 8],
+"nL2TLBWays": ["Int", 1],
+"nLocalInterrupts": ["Int", 0],
+"useNMI": ["Boolean", false],
+"useAtomics": ["Boolean", true],
+"useDebug": ["Boolean", true],
+"useUser": ["Boolean", true],
+"useSupervisor": ["Boolean", false],
+"useHypervisor": ["Boolean", false],
+"useVM": ["Boolean", true],
+"useSCIE": ["Boolean", false],
+"useRVE": ["Boolean", false],
+"useBPWatch": ["Boolean", false],
+"clockGate": ["Boolean", false],
+"mcontextWidth": ["Int", 0],
+"scontextWidth": ["Int", 0],
+"enableCommitLogPrintf": ["Boolean", false],
+"enableBranchPrintf": ["Boolean", false],
+"enableMemtracePrintf": ["Boolean", false]
+    }
+}
+  

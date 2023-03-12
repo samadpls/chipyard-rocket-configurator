@@ -1,0 +1,175 @@
+{
+    "WithNSmallBooms": {
+      "n": ["Int",1],
+      "overrideIdOffset": ["Option[Int]","None"],
+      "WithTAGELBPD": {
+        "BoomTileAttachParams":{
+            "tileParams":{
+                "BoomTileParams":{
+                    "core":{
+                        "BoomCoreParams":{
+                            "fetchWidht":["Int",4],
+                            "decodeWidth":["Int",2],
+                            "numRobEntries":["Int",64],
+                            "issueParams":{
+                                "issueParams": [
+                                    {
+                                        "issueWidth":1,
+                                        "numEntries":16,
+                                        "iqType":["UInt",2],
+                                         "dispatchWidth":1
+                                    },
+                                    {
+                                       
+                                        "issueWidth":2,
+                                        "numEntries":16,
+                                        "iqType":["UInt",1],
+                                         "dispatchWidth":1
+                                    },
+                                    {
+                                       
+                                        "issueWidth":1,
+                                        "numEntries":16,
+                                        "iqType":["UInt",4],
+                                         "dispatchWidth":1
+                                    }                                
+                            ]},
+                            "numLdqEntries": ["Int", 16],
+                            "numStqEntries": ["Int", 16],
+                            "numIntPhysRegisters": ["Int", 80],
+                            "numFpPhysRegisters": ["Int", 64],
+                            "maxBrCount": ["Int", 12],
+                            "numFetchBufferEntries": ["Int", 16],
+                            "enableAgePriorityIssue": ["Boolean", true],
+                            "enablePrefetching": ["Boolean", false],
+                            "enableFastLoadUse": ["Boolean", true],
+                            "enableCommitMapTable": ["Boolean", false],
+                            "enableFastPNR": ["Boolean", false],
+                            "enableSFBOpt": ["Boolean", false],
+                            "enableGHistStallRepair": ["Boolean", true],
+                            "enableBTBFastRepair": ["Boolean", true],
+                            "useAtomicsOnlyForIO": ["Boolean", false],
+                            "ftq": {
+                                "nEntries": ["Int", 32]
+                    
+                            },
+                            "intToFpLatency": ["Int", 2],
+                            "imulLatency": ["Int", 3],
+                            "nPerfCounters": ["Int", 6],
+                            "numRXQEntries": ["Int", 4],
+                            "numRCQEntries": ["Int", 8],
+                            "numDCacheBanks": ["Int", 1],
+                            "nPMPs": ["Int", 8],
+                            "enableICacheDelay": ["Boolean", false],
+                            "enableBranchPrediction": ["Unkown"],
+                            "globalHistoryLength": ["Int", 64],
+                            "localHistoryLength": ["Int", 32],
+                            "localHistoryNSets": ["Int", 128],
+                            "bpdMaxMetaLength": ["Int", 120],
+                            "numRasEntries": ["Int", 32],
+                            "enableRasTopRepair": ["Boolean", true],
+                            "useCompressed": ["Boolean", true],
+                            "useFetchMonitor": ["Boolean", true],
+                            "bootFreqHz": ["BigInt", 0],
+                            "fpu": {
+                            "FPUParams": {
+                                "minFLen":["Int",32],
+                                "fLen":["Int",64],
+                                "divSqrt": ["Boolean", true],
+                                "sfmaLatency": ["Int", 4],
+                                "dfmaLatency": ["Int", 4]
+                            }
+                        },
+                            "usingFPU": ["Boolean", true],
+                            "haveBasicCounters": ["Boolean", true],
+                            "misaWritable": ["Boolean", false],
+                            "mtvecInit": ["BigInt", 0],
+                            "mtvecWritable": ["Boolean", true],
+                            "haveCFlush": ["Boolean", false],
+                            "mulDiv": {
+                                "MulDivParams": {
+                                    "mulUnroll": ["Int", 1],
+                                    "divUnroll": ["Int", 1],
+                                    "mulEarlyOut": ["Boolean", false],
+                                    "divEarlyOut": ["Boolean", true],
+                                    "divEarlyOutGranularity": ["Int", 1]
+                                }
+                            },
+                            "nBreakpoints": ["Int", 0],
+                            "nL2TLBEntries": ["Int", 512],
+                            "nPTECacheEntries": ["Int", 8],
+                            "nL2TLBWays": ["Int", 1],
+                            "nLocalInterrupts": ["Int", 0],
+                            "useNMI": ["Boolean", false],
+                            "useAtomics": ["Boolean", true],
+                            "useDebug": ["Boolean", true],
+                            "useUser": ["Boolean", true],
+                            "useSupervisor": ["Boolean", false],
+                            "useHypervisor": ["Boolean", false],
+                            "useVM": ["Boolean", true],
+                            "useSCIE": ["Boolean", false],
+                            "useRVE": ["Boolean", false],
+                            "useBPWatch": ["Boolean", false],
+                            "clockGate": ["Boolean", false],
+                            "mcontextWidth": ["Int", 0],
+                            "scontextWidth": ["Int", 0],
+                            "enableCommitLogPrintf": ["Boolean", false],
+                            "enableBranchPrintf": ["Boolean", false],
+                            "enableMemtracePrintf": ["Boolean", false]
+
+                            
+                        },
+                        "dcache":{
+                            
+                                "DCacheParams": {
+                                  "nSets": ["Int", 64],
+                                  "nWays": ["Int", 4],
+                                  "rowBits": ["Int", 64],
+                                  "subWordBits": ["Option[Int]", null],
+                                  "replacementPolicy": ["String", "random"],
+                                  "nTLBSets": ["Int", 1],
+                                  "nTLBWays": ["Int", 8],
+                                  "nTLBBasePageSectors": ["Int", 4],
+                                  "nTLBSuperpages": ["Int", 4],
+                                  "tagECC": ["Option[String]", null],
+                                  "dataECC": ["Option[String]", null],
+                                  "dataECCBytes": ["Int", 1],
+                                  "nMSHRs": ["Int", 2],
+                                  "nSDQ": ["Int", 17],
+                                  "nRPQ": ["Int", 16],
+                                  "nMMIOs": ["Int", 1],
+                                  "blockBytes": ["Int", 64],
+                                  "separateUncachedResp": ["Boolean", false],
+                                  "acquireBeforeRelease": ["Boolean", false],
+                                  "pipelineWayMux": ["Boolean", false],
+                                  "clockGate": ["Boolean", false],
+                                  "scratch": ["Option[BigInt]", null]
+                                
+                              }
+                              
+                        },
+                        "icache":{
+                            "nSets": ["Int", 64],
+                            "nWays": ["Int", 4],
+                            "rowBits": ["Int", 128],
+                            "nTLBSets": ["Int", 1],
+                            "nTLBWays": ["Int", 32],
+                            "nTLBBasePageSectors": ["Int", 4],
+                            "nTLBSuperpages": ["Int", 4],
+                            "cacheIdBits": ["Int", 0],
+                            "tagECC": ["String", null],
+                            "dataECC": ["String", null],
+                            "itimAddr": ["BigInt", null],
+                            "prefetch": ["Boolean", false],
+                            "blockBytes": ["Int", 64],
+                            "latency": ["Int", 2],
+                            "fetchBytes": ["Int", 8]
+                          },
+                          "hartId":
+                    }
+                }
+            }
+        }
+      }
+    }
+  }
